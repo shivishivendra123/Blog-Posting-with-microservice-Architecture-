@@ -15,13 +15,16 @@ export default  function Posts(){
     };
 
     return(
-        <form onSubmit={ onSubmit }>
-        <div className="form-group">
-          <label >Post Title</label>
-          <input type="texts" value = { title } onChange= { e=>setTitle(e.target.value) } className="form-control" aria-describedby="emailHelp" placeholder="Enter Title"/>
-          <small id="emailHelp" className="form-text text-muted">Enter Title here</small>
-        </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
-      </form> 
+      <div>
+          <form onSubmit={ onSubmit }>
+          <div className="form-group">
+            <label >Post Title</label>
+            <input type="texts" value = { title } onChange= { e=>setTitle(e.target.value) } className="form-control" aria-describedby="emailHelp" placeholder="Enter Title"/>
+            <small id="emailHelp" className="form-text text-muted">Enter Title here</small>
+          </div>
+          <button type="submit" className="btn btn-primary">Submit</button>
+        </form>
+      </div>
+         
     )
 }

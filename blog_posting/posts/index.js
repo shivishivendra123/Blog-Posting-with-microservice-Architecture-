@@ -27,7 +27,8 @@ app.post('/posts',async(req,res)=>{
     await axios.post("http://localhost:4005/events",{
         type: "PostCreated",
         data:{
-            id , title
+            id , 
+            title:title
         }
     });
 
@@ -42,7 +43,7 @@ app.delete('/posts/:id/delete',(req,res)=>{
 })
 
 app.post('/events',(req,res)=>{
-    console.log(req.body.type);
+    console.log(req.body);
 })
 
 app.listen(4000,()=>{
